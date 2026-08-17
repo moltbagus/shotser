@@ -6,6 +6,8 @@
 - [x] Create a Swift Package Manager scaffold with a menubar app and editor shell.
 - [x] Add capture-mode, tool-selection, copy, and PNG-save seams.
 - [x] Run the available build check.
+- [x] Create isolated Git metadata because the parent home-directory repository is not writable.
+- [ ] Authenticate GitHub CLI and publish `moltbagus/shotser`.
 
 ## Review
 
