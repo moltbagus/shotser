@@ -34,6 +34,7 @@ struct EditorView: View {
                     .help(tool.rawValue.capitalized)
                 }
                 Spacer()
+                Button("OCR / QR") { model.inspectTextAndQR() }
                 Button("Copy") { model.copyToClipboard() }
                 Button("Save") { model.save() }
             }
@@ -46,6 +47,18 @@ struct EditorView: View {
                 } else {
                     ContentUnavailableView("No capture yet", systemImage: "camera.viewfinder", description: Text("Choose a capture mode from the Shotser menubar item."))
                 }
+            }
+            if let status = model.statusMessage {
+                Text(status)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical, 6)
+            }
+            if !model.qrCodes.isEmpty {
+                Text("QR: " + model.qrCodes.joined(separator: ", "))
+                    .font(.caption)
+                    .textSelection(.enabled)
+                    .padding(.bottom, 6)
             }
         }
     }

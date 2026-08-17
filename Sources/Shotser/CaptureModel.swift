@@ -12,11 +12,46 @@ final class CaptureModel: ObservableObject {
     @Published var image: NSImage?
     @Published var selectedTool: EditorTool = .select
     @Published var openEditor = false
+    @Published var statusMessage: String?
+    @Published var recognizedText = ""
+    @Published var qrCodes: [String] = []
+
+    private let captureService = CaptureService()
+    private let visionService = VisionService()
 
     func capture(_ kind: CaptureKind) {
-        // Integration point for ScreenCaptureKit and a transparent selection overlay.
-        // Keeping this seam small lets capture permissions and UI evolve independently.
         openEditor = true
+        do {
+            image = try captureService.capture(kind)
+            statusMessage = kind == .area
+                ? "Full display captured. Area selection overlay is next."
+                : nil
+        } catch {
+            statusMessage = error.localizedDescription
+        }
+    }
+
+    func inspectTextAndQR() {
+        guard let image else {
+            statusMessage = "Capture an image before running OCR."
+            return
+        }
+        Task { @MainActor in
+            do {
+                let result = try await visionService.inspect(image)
+                recognizedText = result.text
+                qrCodes = result.qrCodes
+                if result.text.isEmpty && result.qrCodes.isEmpty {
+                    statusMessage = "No text or QR code found."
+                } else {
+                    statusMessage = "OCR complete."
+                    NSPasteboard.general.clearContents()
+                    NSPasteboard.general.setString(result.text, forType: .string)
+                }
+            } catch {
+                statusMessage = "OCR failed: \(error.localizedDescription)"
+            }
+        }
     }
 
     func save() {
