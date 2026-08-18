@@ -1,5 +1,5 @@
 import AppKit
-import Vision
+@preconcurrency import Vision
 
 struct VisionResult {
     let text: String

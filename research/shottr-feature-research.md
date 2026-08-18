@@ -21,6 +21,8 @@ Shottr is a small, fast, native macOS screenshot utility aimed at designers, fro
 - Open PNG/JPEG files and clipboard images in the editor.
 - Drag and drop image files onto the editor.
 - Configurable global hotkeys.
+- Keyboard shortcuts for repeat capture, open image, clipboard import, OCR, copy, and save.
+- Configurable global area-capture shortcut with a default `⌘⇧2` binding.
 - Preview thumbnail or editor after capture.
 
 ### Editing and composition
@@ -88,6 +90,15 @@ The first scaffold should prove the native capture-to-editor loop before impleme
 6. Pin current image as an always-on-top utility window.
 7. A feature-oriented protocol boundary so scrolling capture, backdrops, S3 upload, and advanced inspection tools can be added without rewriting capture state.
 
+## Shotser implemented slice
+
+- Multi-monitor-aware area capture starts on the display under the pointer.
+- Rectangle and arrow annotations render over the editor image and are included in copy/save output.
+- Open PNG/JPEG/TIFF files and import image data from the clipboard.
+- Repeat the last fullscreen, window, or area capture.
+- Keyboard shortcuts: Cmd+Shift+R repeat, Cmd+O open image, Cmd+Shift+V clipboard image, Cmd+Shift+T OCR/QR, Cmd+C copy, Cmd+S save.
+- Global area capture shortcut defaults to `⌘⇧2` and can be changed in Shotser Settings.
+
 ## Apple platform notes
 
 - Target macOS first; use SwiftUI for app chrome and AppKit/ScreenCaptureKit integration where system APIs require it.
@@ -99,4 +110,3 @@ The first scaffold should prove the native capture-to-editor loop before impleme
 ## Scope boundary
 
 This document records publicly visible product capabilities and a proposed implementation order. It is not a copy of Shottr’s source code, assets, branding, or proprietary implementation.
-
