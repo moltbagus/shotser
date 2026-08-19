@@ -69,3 +69,10 @@ The first capture-to-editor slice is now implemented. Fullscreen, frontmost-wind
 - [x] Rebuild, package, and verify the arm64 app signature.
 
 Result: local release build and strict signature verification passed; one Shotser process is running from `dist/Shotser.app`.
+
+## Follow-up root-cause verification — 2026-08-19
+
+- Observed: editor window was visible, but `NSRunningApplication` reported Shotser as `active=false`.
+- Cause: activation was attempted only from the manually-created editor window path and could occur before the app finished launching.
+- Fix: added an `NSApplicationDelegate` launch activation path and repeated activation after the editor window mounts.
+- Verification: rebuilt app reports `active=true` while the editor window is on-screen; release package and strict code-signature verification pass.

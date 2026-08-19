@@ -2,8 +2,20 @@ import SwiftUI
 import AppKit
 import Foundation
 
+final class ShotserAppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        NSApp.setActivationPolicy(.regular)
+        DispatchQueue.main.async {
+            NSRunningApplication.current.activate(options: [.activateAllWindows, .activateIgnoringOtherApps])
+            NSApp.activate(ignoringOtherApps: true)
+            NSApp.windows.first(where: { $0.title == "Shotser Editor" })?.makeKeyAndOrderFront(nil)
+        }
+    }
+}
+
 @main
 struct ShotserApp: App {
+    @NSApplicationDelegateAdaptor(ShotserAppDelegate.self) private var appDelegate
     @StateObject private var model = CaptureModel()
     @StateObject private var shortcutManager = ShortcutManager()
 

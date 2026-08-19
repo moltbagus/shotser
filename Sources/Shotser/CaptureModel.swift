@@ -72,9 +72,11 @@ final class CaptureModel: ObservableObject {
         NSApp.setActivationPolicy(.regular)
         previewWindow = window
         NSApp.activate(ignoringOtherApps: true)
+        NSRunningApplication.current.activate(options: [.activateAllWindows, .activateIgnoringOtherApps])
         window.orderFrontRegardless()
         window.makeKey()
         DispatchQueue.main.async {
+            NSRunningApplication.current.activate(options: [.activateAllWindows, .activateIgnoringOtherApps])
             NSApp.activate(ignoringOtherApps: true)
             window.makeKeyAndOrderFront(nil)
             window.contentView?.isHidden = false
