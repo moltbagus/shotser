@@ -21,3 +21,4 @@
 - Fresh extracted app passes `codesign --verify --deep --strict`.
 - `NSRunningApplication` reports Shotser active after launch.
 - Exactly one Shotser process remains after a normal launch.
+- A fresh extracted ZIP must report the process active within four seconds of launch.

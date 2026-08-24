@@ -10,6 +10,7 @@
 ## In progress
 
 - Validate toolbar interaction on the physical Mac after installing the latest package.
+- Validate fresh-package foreground activation; automated startup evaluation now passes.
 
 ## Backlog
 

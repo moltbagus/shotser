@@ -5,11 +5,17 @@ import Foundation
 final class ShotserAppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.regular)
-        DispatchQueue.main.async {
-            NSRunningApplication.current.activate(options: [.activateAllWindows, .activateIgnoringOtherApps])
-            NSApp.activate(ignoringOtherApps: true)
-            NSApp.windows.first(where: { $0.title == "Shotser Editor" })?.makeKeyAndOrderFront(nil)
+        for delay in [0.1, 0.5, 1.0, 2.0] {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                NSRunningApplication.current.activate(options: [.activateAllWindows, .activateIgnoringOtherApps])
+                NSApp.activate(ignoringOtherApps: true)
+                NSApp.windows.first(where: { $0.title == "Shotser Editor" })?.makeKeyAndOrderFront(nil)
+            }
         }
+    }
+
+    func applicationDidBecomeActive(_ notification: Notification) {
+        NSApp.windows.first(where: { $0.title == "Shotser Editor" })?.makeKeyAndOrderFront(nil)
     }
 }
 

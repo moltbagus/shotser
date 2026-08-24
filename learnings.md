@@ -7,3 +7,5 @@
 - Full-screen capture overlays must disable mouse events and close, not only order out, before presenting the editor.
 - GitNexus is useful for tracing `ShotserApp -> CaptureModel -> EditorView -> ToolbarIconButton` control flow.
 - WSL2 server sync cannot be assumed; verify SSH reachability before claiming cross-machine synchronization.
+- A local app launch and a fresh extracted ZIP can differ; evaluate the distributed artifact, not only `dist/Shotser.app`.
+- `NSRunningApplication.isActive` can remain false after `open -n`; repeated activation on launch and `applicationDidBecomeActive` closed the packaged-app gap.

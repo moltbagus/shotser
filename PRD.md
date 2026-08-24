@@ -28,3 +28,7 @@ The foreground editor opens as an active macOS application, accepts toolbar inpu
 ## Definition of done
 
 The app launches as one active instance, toolbar actions receive clicks, capture permissions are handled, and the arm64 package opens from a fresh extraction.
+
+## Latest evaluation
+
+Fresh ZIP extraction now launches with `NSRunningApplication.isActive == true` after repeated launch activation timing guards.
