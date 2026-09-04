@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T12:28:59Z
+App path: /Applications/ShotEye.app
+Result: PASS
+Detail: Native menu controls: Rectangle, Select; application menus: 6; WebView toolbar controls are not exposed in the macOS Accessibility tree, so physical toolbar pointer acceptance remains separate.; Capture area cancellation restored the ShotEye editor.

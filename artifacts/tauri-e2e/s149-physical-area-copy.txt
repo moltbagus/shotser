@@ -1,0 +1,13 @@
+ShotEye physical area-capture acceptance report
+Generated (UTC): 2026-09-02T13:59:44Z
+App path: /Applications/ShotEye.app
+Scope: primary display; direct Accessibility toolbar press; HID drag; Copy capture clipboard export.
+Result: PASS
+Detail: Capture invocation: MATCH	role=AXButton	name=Capture area
+PRESSED	name=Capture area; Copy invocation: MATCH	role=AXButton	name=Copy capture
+PRESSED	name=Copy capture; Clipboard export: Wrote 266730 bytes to /Users/colbert1/shoteye/artifacts/tauri-e2e/s149-physical-area-copy.png; exactly one canonical ShotEye process remains.
+Artifact path: /Users/colbert1/shoteye/artifacts/tauri-e2e/s149-physical-area-copy.png
+Artifact bytes: 266730
+Artifact PNG header: 89504e470d0a1a0a
+Artifact dimensions: 1000x800
+Artifact SHA-256: 562b55493dc6ac04bfa26932ca909fec93e7dd2d03e48f29bb42786b17fcd8f3

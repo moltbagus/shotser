@@ -1,0 +1,6 @@
+ShotEye packaged Accessibility shortcut-conflict acceptance
+Generated (UTC): 2026-09-02T13:55:19Z
+App path: /Applications/ShotEye.app
+Fixture shortcut: Command+Alt+F18
+Result: BLOCKED
+Detail: The shortcut fixture could not prove exclusive ownership on this host; no ShotEye conflict claim was made. See /Users/colbert1/shoteye/artifacts/tauri-e2e/shortcut-conflict-fixture.txt. Shortcut fixture blocked: reservation is not exclusive on this macOS host.

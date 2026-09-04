@@ -90,14 +90,14 @@ The first scaffold should prove the native capture-to-editor loop before impleme
 6. Pin current image as an always-on-top utility window.
 7. A feature-oriented protocol boundary so scrolling capture, backdrops, S3 upload, and advanced inspection tools can be added without rewriting capture state.
 
-## Shotser implemented slice
+## ShotEye implemented slice
 
 - Multi-monitor-aware area capture starts on the display under the pointer.
 - Rectangle and arrow annotations render over the editor image and are included in copy/save output.
 - Open PNG/JPEG/TIFF files and import image data from the clipboard.
 - Repeat the last fullscreen, window, or area capture.
-- Keyboard shortcuts: Cmd+Shift+R repeat, Cmd+O open image, Cmd+Shift+V clipboard image, Cmd+Shift+T OCR/QR, Cmd+C copy, Cmd+S save.
-- Global area capture shortcut defaults to `⌘⇧2` and can be changed in Shotser Settings.
+- Keyboard shortcuts: Cmd+Shift+R repeat, Cmd+O open image, Cmd+Shift+V clipboard image, Cmd+C copy, and Cmd+S save; OCR/QR remains future work.
+- Global area capture shortcut defaults to `⌘⇧Y` and can be recorded from the ShotEye editor.
 
 ## Apple platform notes
 

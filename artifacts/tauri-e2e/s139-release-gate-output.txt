@@ -1,0 +1,1 @@
+Installed app is not signed by a Developer ID Application identity. Local/ad-hoc builds are not release-ready.

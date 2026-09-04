@@ -1,0 +1,12 @@
+ShotEye package verified: /Applications/ShotEye.app
+DMG verified: /Users/colbert1/shoteye/tauri-app/src-tauri/target/aarch64-apple-darwin/release/bundle/dmg/ShotEye_0.1.0_aarch64.dmg
+Release gates: not evaluated (local-only verification)
+Bundle: shoteye (com.moltbagus.shoteye.tauri)
+Architecture: arm64
+Helper permission probe: exit 0
+Helper geometry self-test: passed
+Helper mixed-DPI compositor self-test: passed
+Helper crop transform self-test: passed
+Helper selection reducer/AppKit event self-test: passed
+Helper display-read self-test: exit 0
+Report written: artifacts/tauri-e2e/s107-final-installed-verification.txt

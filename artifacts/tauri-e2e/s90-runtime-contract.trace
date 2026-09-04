@@ -1,0 +1,11 @@
+restore_capture_window:start
+restore_capture_window:complete
+runtime_contract_enabled
+capture_frontend_ready:start
+capture_frontend_ready:end
+capture_native:start
+capture_native:hidden
+restore_capture_window:start
+restore_capture_window:complete
+capture_native:end
+runtime_contract_report:start

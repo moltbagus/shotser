@@ -1,0 +1,1 @@
+Release packaging requires SHOT_EYE_SIGNING_IDENTITY set to a Developer ID Application identity.

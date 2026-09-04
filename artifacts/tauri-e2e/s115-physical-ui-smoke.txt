@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T09:14:42Z
+App path: /Applications/ShotEye.app
+Result: BLOCKED
+Detail: Accessibility automation is unavailable or the desktop is locked: 235:250: execution error: System Events got an error: osascript is not allowed assistive access. (-25211)

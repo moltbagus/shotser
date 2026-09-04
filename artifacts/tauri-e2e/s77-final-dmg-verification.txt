@@ -1,0 +1,11 @@
+ShotEye package verification report
+Generated (UTC): 2026-08-30T02:52:04Z
+App path: /var/folders/b0/621fj52s2zbg3tm8vn4nrjyw0000gn/T/shoteye-dmg.7UJxrmoeuW/ShotEye.app
+Bundle: shoteye (com.moltbagus.shoteye.tauri)
+App executable SHA-256: 848de3eff752676cf07b98512614bf28b70761a0f9fbe32bfeed9ce34d3984cf
+Helper SHA-256: 65a5b4754c1ce77c813c0d663df1d871f489a03eb05da1fc7326e1182bc72c28
+Helper permission preflight exit: 0
+Helper display-read self-test exit: 0
+Helper selection reducer/AppKit event self-test exit: 0
+DMG path: artifacts/releases/ShotEye_0.1.0_aarch64.dmg
+DMG SHA-256: 2c9a0cb50d6ecc6c2d9b454c37d4abb05795d4c3fe3fe0ae35a8ba8748ade5ab

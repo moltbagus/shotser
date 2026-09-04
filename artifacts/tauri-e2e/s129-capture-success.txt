@@ -1,0 +1,13 @@
+ShotEye packaged area-capture success report
+App path: /Applications/ShotEye.app
+Capture entry: ShotEye native menu Capture -> Capture Area
+Selection input: macOS HID drag from (400,400) to (700,650)
+Native selector: exited normally after successful selection
+Editor state: restored and active as the main non-minimized window
+Export entry: ShotEye native menu File -> Copy Capture
+Clipboard image types: PNG, AVIF, 8BPS, GIF, JPEG, TIFF, BMP, TPIC
+PNG artifact: artifacts/tauri-e2e/s129-capture-success.png
+PNG dimensions: 600x500
+PNG size: 89518 bytes
+PNG SHA-256: 46a4af299f9e1cf04a0216df04cbf0c0064dd1f7fe1b6624d89ddbc9f97a4152
+Scope: proves packaged selector-to-clipboard flow; does not prove toolbar DOM Accessibility, global shortcut, Finder drop, secondary-display, Developer ID, Gatekeeper, or notarization behavior.

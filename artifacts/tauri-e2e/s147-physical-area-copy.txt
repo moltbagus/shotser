@@ -1,0 +1,14 @@
+ShotEye packaged physical area-capture acceptance
+Generated (UTC): 2026-09-02
+App path: /Applications/ShotEye.app
+Capture entry: direct AX toolbar control "Capture area"
+Selection input: macOS HID drag from (420,360) to (920,760)
+Native selector: observed and exited after successful selection
+Export entry: direct AX toolbar control "Copy capture"
+PNG artifact: artifacts/tauri-e2e/s147-physical-area-copy.png
+PNG signature: 89504e470d0a1a0a
+PNG dimensions: 1000x800
+PNG size: 112984 bytes
+PNG SHA-256: 530cece062c67db7d02f0a3f8c8e30549561d03e3bb06ceac1d761ade24529d2
+Visual inspection: upright desktop content; no horizontal or vertical mirroring observed.
+Scope: proves installed toolbar-to-selector-to-HID-selection-to-Copy PNG flow on the primary display. It does not prove secondary-display capture, shortcut conflict with another app, Developer ID signing, Gatekeeper, or notarization.

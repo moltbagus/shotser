@@ -1,0 +1,20 @@
+ShotEye package verification report
+Generated (UTC): 2026-08-30T10:44:35Z
+Verification mode: local-only (strict structure; Developer ID and notarization not required)
+App path: /var/folders/b0/621fj52s2zbg3tm8vn4nrjyw0000gn/T/shoteye-dmg.Flzg8skm1D/ShotEye.app
+Bundle: shoteye (com.moltbagus.shoteye.tauri)
+App signature authority: ShotEye Local Development
+App TeamIdentifier: not set
+Helper signature authority: ShotEye Local Development
+Helper TeamIdentifier: not set
+App executable SHA-256: b89e528b8fd4dea12a2d0b436d09dd512f89a22a9fe0fad6d3e8b4e222110d79
+Helper SHA-256: 03abe7592af0cf345a38d8ac198fe3de738c579c35025e997e173b6b24062a34
+Helper permission preflight exit: 0
+Helper display-read self-test exit: 0
+Helper capture-output self-test SHA-256: 6c8b127c2fb5855f09b516b4a6f2ea3cfbd27af116714caf3a9e6980c4ac3565
+Helper capture-output self-test dimensions: 8x4
+Helper selection reducer/AppKit event self-test exit: 0
+DMG path: artifacts/releases/ShotEye_0.1.0_aarch64.dmg
+DMG SHA-256: d45db1935a93bfdc86ce35b0f6348b764ba3d06b6faa22edbb54750fb02f838d
+Canonical DMG path: /Users/colbert1/shoteye/artifacts/releases/ShotEye_0.1.0_aarch64.dmg
+Canonical DMG SHA-256: d45db1935a93bfdc86ce35b0f6348b764ba3d06b6faa22edbb54750fb02f838d

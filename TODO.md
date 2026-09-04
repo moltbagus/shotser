@@ -1,9 +1,208 @@
-# Shotser TODO
+# ShotEye TODO
 
+- [x] Rename the local workspace and isolated Git metadata from `shotser` to `shoteye`.
 - [x] Ensure editor process is active after launch.
 - [x] Close selection overlay before editor presentation.
 - [x] Verify release package signature.
-- [ ] Test physical toolbar clicks from the latest extracted package; startup eval is green, synthetic clicks remain blocked by Accessibility.
-- [ ] Add automated AppKit event/hit-test regression coverage.
-- [ ] Add undo/redo and crop/reset.
+- [x] Test packaged Tauri toolbar clicks and capture-cancellation recovery with the native accessibility harness.
+- [x] Add automated AppKit event/hit-test regression coverage through the bundled selector's permission-free event self-test.
+- [x] Add native selector drag-normalization self-test coverage without requiring a visible overlay.
+- [x] Reset undersized and cancelled native selector gestures before the next drag.
+- [x] Add drag-to-move support for selected annotations.
+- [x] Add resize handles for selected rectangles and arrows.
+- [x] Add stable direct AX discovery and reversible shortcut-fixture cleanup harness.
+- [ ] Find an exclusive macOS shortcut-registration boundary for real packaged conflict acceptance; preserve the current fail-closed block meanwhile.
+- [x] Re-run packaged Capture Area cancellation using bounded execution and cleanup verification.
+- [x] Add bounded AppleScript execution and pass fresh packaged Capture Area cancellation (S146).
+- [x] Capture a primary-display area through the installed toolbar and validate ShotEye Copy PNG output (S147).
+- [x] Prove shortcut replacement preserves the active binding on registration conflict and rolls back failed replacement cleanup (S143).
 - [ ] Reconnect and sync the WSL2 server-side checkout when SSH is available.
+- [x] Verify a packaged Tauri WebKit frontend and Rust toolbar IPC path on macOS.
+- [x] Replace the capture diagnostic action with native macOS interactive capture and preview.
+- [x] Add a separate native clipboard-copy command with safe empty-state errors.
+- [x] Add native Save dialog integration.
+- [ ] Add independent successful drag-selection regression; cancellation is currently verified.
+- [x] Clean stale Tauri development instances before packaged-app evaluation.
+- [x] Harden capture lifecycle against stale PNG reuse and overlapping selector actions.
+- [x] Add packaged Tauri single-instance focus behavior and the default global area-capture shortcut (`⌘⇧Y`).
+- [x] Replace shared capture-file export state with a Rust-owned canonical image record.
+- [x] Add source-image annotations and composited Tauri Copy/Save export preparation.
+- [x] Grant the packaged Tauri hide/show/focus capability required by the capture lifecycle.
+- [x] Add native file and clipboard image import normalized to the canonical PNG capture model.
+- [x] Verify Open JPEG → annotate → Copy/Paste → Save through the installed package.
+- [x] Add Full screen and Repeat Last Capture controls backed by native capture-mode state.
+- [x] Add Window capture through the native macOS window-selection mode and preserve it for Repeat Last Capture.
+- [x] Add bounded session capture history with thumbnail restore controls and App-level coverage.
+- [x] Bound session history by both entry count and encoded data size.
+- [x] Add a privacy-safe Pixelate annotation with source-coordinate editing and shared export composition; S112 package evidence is under `artifacts/tauri-e2e/`.
+- [x] Add a privacy-safe Blur annotation with source-coordinate editing and shared export composition; S113 package evidence is under `artifacts/tauri-e2e/`.
+- [x] Add an accessible Clear history control that forgets in-memory session entries without removing the current editor image.
+- [x] Add opaque black Redact annotations with resize, crop, Copy, Save, and Drag composition coverage.
+- [x] Install Rust lint components and make native Clippy clean without a broad formatter rewrite.
+- [x] Preserve source-display orientation through the native compositor and verify an upright installed-package PNG through Copy.
+- [x] Harden Finder drag-out source coordinates and retain the staged file through asynchronous Finder consumption; verify an isolated installed-package drop.
+- [ ] Test secondary-display capture and occupied-shortcut/alternate-layout behavior.
+- [ ] Obtain Developer ID signing and notarization credentials for a public release package.
+- [x] Preflight Screen Recording on editor startup and show the actionable permission state without opening a consent prompt.
+- [x] Add a native always-on-top Pin toggle with capability coverage and failure-safe state updates.
+- [x] Move clipboard Copy/import staging into private RAII-cleaned temporary directories.
+- [x] Add PNG/JPEG/TIFF Save format selection with Rust-side extension validation and encoding.
+- [x] Add native AppKit Finder drag-out for the canonical annotated PNG.
+- [x] Make the root build/run scripts target the Tauri ShotEye bundle only and isolate the legacy Swift prototype.
+- [x] Validate the host architecture and both packaged Mach-O binaries before reporting a local package.
+- [x] Harden startup shortcut delivery, native shortcut recording, crop cancellation, and partial multi-monitor failure handling.
+- [x] Harden native drag startup against stale IPC event timing, invisible drag previews, and abandoned staged files.
+- [x] Serialize Open, Paste, and Crop with capture/export canonical-image operations and guard their terminal statuses against stale async results.
+- [x] Kill and reap native capture children when polling reports an error.
+- [x] Add injectable helper/system selector dispatch coverage for permission fallback, cancellation, helper failure, and timeout behavior.
+- [x] Isolate the frontend hidden-window capture lifecycle and cover its restoration/error paths.
+- [x] Cover independent focus recovery when native window show fails.
+- [x] Serialize background drag export preparation with Copy and Save so the latest annotation revision wins.
+- [ ] Physically drag a packaged ShotEye capture into Finder and verify the dropped file opens with the expected PNG dimensions.
+- [ ] Re-authorize Screen Recording for the exact latest installed ShotEye package, then verify Full screen → Repeat Last Capture.
+- [x] Preflight native Screen Recording access before spawning `screencapture` to prevent repeated consent prompts; packaged acceptance evidence is in `artifacts/tauri-e2e/s11-permission-preflight.jpg`.
+- [x] Remove the duplicate WebView titlebar so only native macOS traffic lights are displayed.
+- [ ] Obtain an Apple Developer `Developer ID Application` certificate and replace local/ad-hoc evaluation signing; the local `ShotEye Local Development` identity now preserves app/helper authority continuity but has no TeamIdentifier and is not public-release trust.
+- [ ] With a secondary display connected, re-authorize the exact packaged ShotEye binary and complete a physical area-drag proof using the unified macOS selector.
+- [ ] Physically record a custom capture shortcut and invoke it while ShotEye is not focused; verify conflict feedback leaves the previous shortcut active.
+- [ ] After authorizing the exact package, invoke `Open settings` once and confirm it reaches macOS Screen Recording settings without requesting unrelated permissions.
+- [x] Add a configurable shortcut settings UI and registration-error feedback (S124 package evidence is under `artifacts/tauri-e2e/`).
+- [x] Add native-feeling editor shortcuts for history, open, paste, copy, and save.
+- [x] Add a bundled AppKit multi-display selector behind the existing `capture_area` command.
+- [ ] Evaluate ScreenCaptureKit as the pixel backend when required by future macOS compatibility targets.
+- [ ] Verify a completed physical drag-selection plus annotated Copy/Save pixels in an independent acceptance run.
+- [ ] Grant Screen Recording to the exact `/Applications/ShotEye.app` package, then complete a physical area-capture acceptance run.
+- [x] Harden the AppKit selector's key handling, deactivation cleanup, overlay exclusion, and vertical multi-display composition.
+- [x] Preserve the last valid canonical image across capture denial, cancellation, malformed output, and launch failure.
+- [x] Require a PNG signature for native capture output and distinguish helper cancellation from helper failure.
+- [x] Add `NSScreenCaptureUsageDescription` and align the packaged minimum macOS version with the Swift selector.
+- [ ] Prove helper-side TCC authorization and successful area capture on the exact installed ShotEye package.
+- [x] Remove the diagnostic toolbar IPC/status path so product actions cannot race or expose framework state.
+- [x] Rename the native executable/library and package metadata from `tauri-app` to `shoteye`; replace stale installed bundles recoverably before launch.
+- [x] Add a guarded `scripts/package_app.sh --release` path that rejects non-Developer-ID identities and validates Gatekeeper/stapling when credentials exist.
+- [x] Add a non-prompting bundled-selector Screen Recording probe and use its reserved denial result to choose the system selector fallback before showing an overlay.
+- [x] Evaluate parent Screen Recording preflight before hiding the editor so known denial leaves the editor visible and avoids an unnecessary lifecycle transition.
+- [x] Refresh Screen Recording status when ShotEye regains focus after System Settings without requesting consent or running checks on blur.
+- [x] Revalidate the stable local identity and exact installed arm64 package; record the locked-session/Accessibility boundary without claiming physical UI acceptance.
+- [x] Refresh and reinstall the current arm64 package, then verify the installed app and mounted canonical DMG with matching local app/helper authority.
+- [x] Add and run the canonical installed-package Accessibility UI smoke harness; preserve an explicit blocked artifact when assistive access is unavailable.
+- [x] Extend the UI smoke harness with reversible representative Rectangle/Select/Pin/Unpin toolbar clicks.
+- [x] Coalesce duplicate in-flight focus-driven Screen Recording status checks and cover the red/green regression.
+- [x] Recover from a stale persisted capture shortcut at startup without changing the active native default or masking a failed live replacement.
+- [x] Keep editor startup alive when the default global capture shortcut is occupied, and retry an unregistered current value.
+- [x] Make the root build/run/verify workflow install and launch one canonical `/Applications/ShotEye.app` bundle so TCC permissions cannot target a different build-tree copy.
+- [x] Make supported launch and verification commands focus the canonical installed ShotEye bundle without `open -n`; add the `scripts/test_canonical_launch.sh` regression guard.
+- [x] Make package-time cleanup archive stale unqualified generated ShotEye bundles safely and fail closed when one is running.
+- [x] Verify the canonical mounted DMG can launch its own same-identifier payload without leaking a mounted volume or test process.
+- [x] Prevent stale React export preparation from racing Copy, Save, and Drag by using latest refs plus bounded revision retries.
+- [x] Add one install-level `scripts/verify_app.sh` gate and route `script/build_and_run.sh --verify` through it.
+- [x] Serialize Copy, Save, and Drag actions with a shared async guard and test release after rejection.
+- [x] Unify capture with the Copy/Save/Drag native-operation lane so no native adapter actions overlap.
+- [x] Add a product-branded native macOS menu that delegates File, Capture, Edit, and Help commands to the current guarded editor actions.
+- [x] Reject display-gap area selections before compositing and fail closed on inconclusive bundled-selector permission probes.
+- [x] Bound and reap native selector/screencapture children so a stuck capture cannot leave ShotEye permanently busy.
+- [x] Bound the bundled helper permission probe and treat timeout as an inconclusive system-selector fallback.
+- [x] Prevent background Drag prewarming from mutating Rust-owned rendered capture state.
+- [x] Guard delayed startup status promises against overwriting later user actions.
+- [x] Verify the exact mounted DMG payload rather than checking only that a DMG file exists.
+- [ ] Add a physical or CI Finder-enabled DMG launch acceptance run; mounted payload checks do not prove Finder installation behavior.
+- [ ] Add an independent packaged UI harness for rapid annotate → Copy/Save/Drag changes; pure revision proof and local package checks are green, but physical pointer/export acceptance remains pending.
+- [ ] Add independent Accessibility-enabled menu-click acceptance for the installed ShotEye bundle.
+- [x] Add mixed-DPI pixel-composition coverage using native backing-coordinate transforms; the selector self-test checks the full synthetic output and the install verifier runs it for the app and mounted DMG.
+- [x] Define explicit floor/ceil backing-pixel bounds for native source crops and compositor destination edges; verify fractional seams and vertical orientation in the selector self-test.
+- [x] Add native crop-transform self-test coverage and bound the Screen Recording settings opener so permission recovery cannot hang.
+- [x] Add a noninteractive native display-read self-test and run it for the exact installed app and mounted DMG helper.
+- [x] Serialize toolbar/native-menu permission actions and suppress stale permission status after later user actions.
+- [x] Make package verification select the exact architecture/version DMG and require a strict source signature before install replacement.
+- [ ] Add a physical timeout/cancellation acceptance run with the exact installed package.
+- [x] Make Save replace destinations atomically after complete encoding, with a regression test proving no staging file remains.
+- [x] Verify public release packaging fails closed without a Developer ID signer or notarization credentials.
+- [x] Give shared toolbar buttons a 40px minimum target and a visible keyboard focus ring.
+- [x] Replace platform-dependent Unicode toolbar glyphs with stable accessible vector icons.
+- [x] Bound clipboard import and Copy helper processes so a hung AppleScript cannot strand the editor operation lane.
+- [x] Prepare Save exports only after the user selects a destination, preserving the latest annotation revision.
+- [x] Archive the stale root `dist/Shotser.app` and reject duplicate `.app` bundles under root `dist/` during package/verification.
+- [x] Verify the duplicate-app guard fails closed on both package and verification paths, then remove the probe.
+- [x] Preserve captured PNG visual orientation by removing the extra native compositor y-axis reflection; mixed-DPI and output-boundary self-tests now enforce top-to-bottom order.
+- [x] Reduce ShotEye toolbar SVG icons to 16px while retaining the 40px button interaction target and accessible labels.
+- [x] Correct the packaged UI smoke harness to use native menus when WKWebView DOM buttons are not exposed to System Events.
+- [x] Verify installed-package Capture Area cancellation and editor restoration through the native menu path.
+- [x] Verify installed-package HID area selection and ShotEye Copy Capture output as a valid `600×500` PNG.
+- [x] Traverse the nested WebView Accessibility tree and pass installed toolbar-control smoke for 25 controls, six menus, Rectangle, and Select.
+- [x] Pass installed `Capture area` toolbar click → HID selection → selector exit/editor restoration → Copy Capture as a valid `600×500` PNG.
+- [x] Verify installed default and custom global shortcut routing while Finder is frontmost, including reset to default.
+- [ ] Complete physical toolbar pointer, global shortcut, Finder-drop, secondary-display, Developer ID, Gatekeeper, and notarization acceptance.
+- [x] Clarify that macOS's Screen & System Audio Recording label is used for ShotEye's screen-only capture and protect the guidance with a Rust regression.
+- [x] Prevent a delayed Crop result from overwriting a newer Reset, image import, or annotation-history mutation with a synchronous image-edit revision guard.
+- [x] Add a revision-stable async crop boundary with deterministic delayed-work coverage for Crop → Reset and Crop → annotation invalidation.
+- [x] Add a component-level async crop harness covering deferred browser image/canvas work and visible state commits.
+- [x] Extend the component harness through the real Capture area entry point for success, single-flight re-entry, rejected capture, and native cancellation recovery.
+- [x] Extend the component harness through annotated Copy, Save, and Drag, including canvas rasterization and Save-dialog ordering.
+- [x] Add a permission-free bundled-selector AppKit event self-test covering forward/reverse drag callbacks, Escape cancellation, and first-responder readiness.
+- [x] Require release packaging to validate the bundled selector's Developer ID authority and matching Team ID, and report its event self-test exit code in package evidence.
+- [x] Keep duplicate-launch activation from stealing focus or cancelling an active hidden capture; guard overlap and release activity through RAII.
+- [x] Add explicit local-only versus `--release` verification mode; require Developer ID, matching Team IDs, Gatekeeper, and stapled app/DMG tickets in release mode.
+- [ ] Obtain Developer ID credentials and run `scripts/verify_app.sh --release` against the exact installed app and DMG.
+- [x] Refresh the editor keyboard-action closure when the current image changes so keyboard Copy/Save work after Open, Paste, Crop, and capture.
+- [x] Route native Edit-menu mutations through the capture-aware editor dispatcher and clear transient annotation drafts on Clear/Reset.
+- [x] Add a deterministic packaged frontend-to-Rust IPC runtime-contract acceptance probe and regression-proof its camelCase Tauri payload.
+- [x] Run blocking native capture work through a Tauri worker boundary so the UI command path remains responsive.
+- [x] Make Rust the single hide/restore owner and surface native restoration failures in the capture result and runtime contract.
+- [x] Add a bounded local signing probe and sign the bundled selector before re-signing the outer app so local app/helper identity authority matches.
+- [x] Serialize runtime-contract frontend readiness behind asynchronous capture-listener registration so queued startup shortcuts cannot be lost.
+- [x] Atomically refresh the canonical architecture-specific DMG from package output and reject built/requested DMG parity mismatches in verification.
+- [ ] Add a delayed real-selector acceptance run proving WebView responsiveness during a long physical selection.
+- [x] Make runtime-contract traces per-run and record explicit native restoration events.
+- [x] Preserve a valid capture when show/focus restoration reports an error, and make startup shortcut fallback registration truthful when the default is also unavailable.
+- [ ] Decide and implement privacy-preserving durable capture history separately from the current in-memory session history.
+- [x] Add opt-in packaged `Capture area` → Escape lifecycle harness with selector-process exit and editor-restoration assertions; current host is correctly blocked by Accessibility `-25211`.
+- [ ] Run the opt-in selector-cancellation harness on an unlocked, Accessibility-enabled desktop and complete physical capture/export/secondary-display acceptance.
+- [x] Prevent explicit bundled-selector TCC denial from falling through to a repeated-prompt system capture path; packaged local verification passes.
+- [ ] Run the TCC-mismatch/no-repeat-prompt regression and successful physical capture on an unlocked, Accessibility-enabled desktop.
+- [x] Add non-prompting parent/helper Screen Recording diagnostics to the packaged ShotEye permission status path.
+- [ ] Exercise the diagnostic on the real unlocked desktop after toggling the exact installed ShotEye identity, then complete physical capture/export acceptance.
+- [x] Make the status footer auto-grow and expose a polite live-region contract so long permission/capture recovery messages do not overlap or clip the editor; S110 package evidence is recorded under `artifacts/tauri-e2e/`.
+- [ ] Re-run S110 physical UI smoke and capture-cancel acceptance on an unlocked, Accessibility-enabled desktop.
+- [x] Add Finder image drag-and-drop for PNG, JPEG, and TIFF files through the canonical guarded Open Image path; S111 package evidence is under `artifacts/tauri-e2e/`.
+- [ ] Physically verify Finder image drop on the exact installed ShotEye package.
+- [x] Add a native macOS Tools menu for Select, Crop, Arrow, Rectangle, Text, Draw, Redact, Pixelate, and Blur through the shared current-state dispatcher; S114 package evidence is under `artifacts/tauri-e2e/`.
+- [ ] Physically verify native Tools-menu routing and the remaining selector/shortcut/Clipboard/Save/Finder-drop/secondary-display flows on an unlocked Accessibility-enabled desktop.
+- [x] Add `⌘⇧R`/`⌃⇧R` Repeat Last Capture keyboard routing through the shared capture lifecycle; S115 package evidence is under `artifacts/tauri-e2e/`.
+- [ ] Physically verify Repeat Last Capture from the keyboard and the remaining selector/toolbar/menu/Clipboard/Save/Finder-drop/secondary-display flows on an unlocked Accessibility-enabled desktop.
+- [x] Make Repeat Last Capture discoverable in the toolbar and native Capture menu with `⌘⇧R`; S116 package evidence is under `artifacts/tauri-e2e/`.
+- [x] Centralize Repeat Last Capture's registration, native-menu, display, and ARIA shortcut representations; S117 package evidence is under `artifacts/tauri-e2e/`.
+- [x] Add visible primary toolbar shortcut hints and matching accessibility/native-menu metadata for Open, Paste, Copy, Save, Undo, Redo, and Repeat; S118 package evidence is under `artifacts/tauri-e2e/`.
+- [x] Enforce app-before-DMG release notarization/stapling and canonical artifact refresh order; S119 package-order evidence is recorded under `artifacts/tauri-e2e/`.
+- [ ] Configure a real Developer ID identity and Apple notarization credentials, then run release Gatekeeper/notarization verification.
+- [ ] Complete physical selector, shortcut, toolbar, Clipboard/Save, Finder-drop, and secondary-display acceptance on an unlocked Accessibility-enabled desktop.
+- [x] Reconcile area-capture permission with the bundled selector identity when parent Tauri preflight is stale; preserve fail-closed denial behavior (S120 package evidence is under `artifacts/tauri-e2e/`).
+- [x] Make the Permissions action inspect the bundled selector before requesting macOS consent; prevent repeated prompts for authorized, denied, or inconclusive selector states (S121 package evidence is under `artifacts/tauri-e2e/`).
+- [x] Add a helper-generated PNG capture self-test and verify it from both the installed app and mounted DMG (S122 package evidence is under `artifacts/tauri-e2e/`).
+- [x] Add phase-aware busy state and rapid annotated Copy/Save/Drag acceptance coverage (S123 package evidence is under `artifacts/tauri-e2e/`).
+- [ ] Run physical phase feedback, selector, shortcut, toolbar, Clipboard/Save, Finder-drop, and secondary-display acceptance on an unlocked Accessibility-enabled desktop.
+- [ ] Run physical shortcut-conflict, selector, toolbar, Clipboard/Save, Finder-drop, and secondary-display acceptance on an unlocked Accessibility-enabled desktop.
+## Done — S138 installed Save acceptance
+
+- Fresh packaged area capture was saved and validated as PNG (`1000×800`, 66,800 bytes): `artifacts/tauri-e2e/s138-tauri-save-acceptance.png`.
+- Open image was exercised; WebView text is not exposed to Accessibility, so reopen pixel-equivalence remains a separate evidence gap.
+## Done — S139 release-gate audit
+
+- Release verification fails closed as designed: no Developer ID Application identity is installed. Evidence: `artifacts/tauri-e2e/s139-release-gate-output.txt`.
+## Done — S140 final local package verification
+
+- Final installed bundle and canonical DMG verification passed with all local helper and output-boundary checks. Public Developer ID/notarization remains pending.
+## S141 gate inventory
+
+- [ ] Attach a second display and complete secondary-display selection.
+- [ ] Re-run occupied-shortcut acceptance on a stable Accessibility-enabled desktop.
+
+## S148 repeatable physical capture evidence
+
+- [x] Add and pass an installed-app primary-display Capture Area → HID selection → Copy PNG acceptance harness.
+- [x] Validate the fresh copied PNG header, dimensions (`1000×800`), SHA-256, and upright visual orientation.
+- [x] Run serial selector cancellation and local installed/DMG package verification after physical capture.
+- [x] Restrict physical-harness report and PNG replacement to project-owned evidence paths and pass two additional serial primary-display runs.
+- [ ] Find a macOS shortcut reservation API or alternate isolated application boundary that proves exclusive external chord ownership; the current Carbon fixture is intentionally `BLOCKED` because duplicate registration succeeds.
+- [x] Verify that replacing the fixture with the current Tauri/global-hotkey dependency would not solve exclusivity: both paths use Carbon `RegisterEventHotKey`.
+- [ ] Attach a second display and repeat physical capture there.
+- [ ] Obtain Developer ID Application and notarization credentials, then run release-mode Gatekeeper validation.

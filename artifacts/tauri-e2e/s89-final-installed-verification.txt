@@ -1,0 +1,16 @@
+ShotEye package verification report
+Generated (UTC): 2026-08-30T05:04:43Z
+Verification mode: local-only (strict structure; Developer ID and notarization not required)
+App path: /Applications/ShotEye.app
+Bundle: shoteye (com.moltbagus.shoteye.tauri)
+App signature authority: 
+App TeamIdentifier: not set
+Helper signature authority: 
+Helper TeamIdentifier: not set
+App executable SHA-256: 19be960854ee94aa01e07a27ce14fd172b9309eeea1e4c676321db8ee40600d3
+Helper SHA-256: 65a5b4754c1ce77c813c0d663df1d871f489a03eb05da1fc7326e1182bc72c28
+Helper permission preflight exit: 0
+Helper display-read self-test exit: 0
+Helper selection reducer/AppKit event self-test exit: 0
+DMG path: /Users/colbert1/shoteye/tauri-app/src-tauri/target/aarch64-apple-darwin/release/bundle/dmg/ShotEye_0.1.0_aarch64.dmg
+DMG SHA-256: 56dd3e55998c8526c2b8c75cce4d1dd219b5f3843836df64cecd6d6afb2a1720

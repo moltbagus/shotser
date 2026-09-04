@@ -1,0 +1,7 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T14:10:30Z
+App path: /Applications/ShotEye.app
+Result: PASS
+Detail: surface=direct-ax; Direct AX attachment: pid=46690; MATCH	role=AXButton	name=Record capture shortcut; MATCH	role=AXButton	name=Rectangle
+PRESSED	name=Rectangle; MATCH	role=AXButton	name=Select
+PRESSED	name=Select

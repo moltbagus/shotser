@@ -1,0 +1,15 @@
+ShotEye S101 physical acceptance boundary
+Generated (UTC): 2026-08-30T07:23:07Z
+
+Observed:
+- The desktop session was at the macOS login screen during the screenshot attempt, so the ShotEye editor was not an observable foreground UI.
+- System Events returned: osascript is not allowed assistive access. (-1728)
+- The exact installed package remained independently verifiable: helper permission preflight and display-read self-test both exited 0.
+
+Expected for physical acceptance:
+- Unlock the Mac session.
+- Grant Accessibility to the exact installed /Applications/ShotEye.app identity.
+- Drive Capture area, Escape, toolbar actions, global shortcut, Copy/Save/Drag, and secondary-display selection with an independent controller.
+
+Result:
+- Not a physical UI pass. No toolbar-click, pointer-drag, shortcut, Clipboard/Save, Finder-drag, or secondary-display claim is made from this run.

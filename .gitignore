@@ -1,4 +1,5 @@
-.shotser-git/
+.shoteye-git/
+tauri-app/src-tauri/native/ShotEyeSelector
 .DS_Store
 .build/
 dist/

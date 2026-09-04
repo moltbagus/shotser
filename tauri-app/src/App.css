@@ -1,0 +1,41 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #f7f8f8; background: #17191a; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 720px; min-height: 520px; background: #17191a; }
+button { appearance: none; border: 1px solid #3b4143; border-radius: 9px; background: #292e30; color: #f7f8f8; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 7px; font: inherit; min-height: 40px; padding: 0 13px; }
+button:disabled { cursor: default; opacity: .5; }
+button:hover { border-color: #67a9ff; }
+button:focus-visible { border-color: #8ec2ff; outline: 2px solid #8ec2ff; outline-offset: 2px; }
+button:active, button.active { background: #4a5458; }
+.shortcut-hint { color: #b8c0c3; font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+.shoteye-shell { min-height: 100vh; display: grid; grid-template-rows: auto minmax(0, 1fr) auto minmax(42px, auto); }
+.toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 14px; padding: 12px; border: 1px solid #3a4244; border-radius: 14px; background: #222829; }
+.toolbar button span { margin-left: 0; }.toolbar-icon { width: 16px; height: 16px; flex: 0 0 auto; }.divider { height: 30px; width: 1px; background: #495254; margin: 0 3px; }.primary { background: #2478d7; border-color: #4c9df1; }
+.canvas { position: relative; display: grid; place-items: center; overflow: auto; margin: 0 14px 14px; border: 1px dashed #485154; border-radius: 14px; background: #1d2223; }
+.canvas.file-drop-active { border-color: #67a9ff; background: #1d2b3a; box-shadow: inset 0 0 0 2px #67a9ff55; }
+.drop-hint { position: absolute; z-index: 2; top: 20px; left: 50%; transform: translateX(-50%); padding: 9px 14px; border: 1px solid #67a9ff; border-radius: 999px; background: #173b63ee; color: #f7f8f8; font-size: 13px; font-weight: 600; pointer-events: none; }
+.capture-viewport { display: grid; place-items: center; width: 94%; height: 94%; min-height: 0; min-width: 0; }
+.image-stage { position: relative; width: min(100%, 1100px); max-height: 100%; transform-origin: center; transition: transform 120ms ease-out; box-shadow: 0 12px 40px #0008; }
+.capture-preview { display: block; width: 100%; height: 100%; border-radius: 8px; object-fit: fill; user-select: none; }
+.annotation-layer { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
+.annotation-layer.selecting { cursor: default; pointer-events: auto; }
+.crop-guide { fill: #4c9df133; stroke: #8ec2ff; stroke-width: 2; stroke-dasharray: 7 5; }
+.annotation-selected { filter: drop-shadow(0 0 5px #ffffffcc); }
+.annotation-handle { pointer-events: all; }
+.annotation-handle[data-handle="nw"], .annotation-handle[data-handle="se"] { cursor: nwse-resize; }
+.annotation-handle[data-handle="ne"], .annotation-handle[data-handle="sw"] { cursor: nesw-resize; }
+.annotation-handle[data-handle="start"], .annotation-handle[data-handle="end"] { cursor: crosshair; }
+.tool-control { display: inline-flex; align-items: center; gap: 6px; color: #b8c0c3; font-size: 12px; white-space: nowrap; }
+.shortcut-control { gap: 6px; }
+.shortcut-control > button { min-height: 34px; padding: 0 9px; }
+.shortcut-state { font-size: 11px; font-weight: 700; }
+.shortcut-state-active { color: #7be0a4; }
+.shortcut-state-checking { color: #cbd2d4; }
+.shortcut-state-conflict { color: #ffb86b; }
+.shortcut-state-inactive { color: #ff8e98; }
+.tool-control input[type="color"] { width: 34px; height: 34px; padding: 2px; border: 1px solid #3b4143; border-radius: 9px; background: #292e30; }
+.tool-control input[type="range"] { accent-color: #4c9df1; width: 70px; }
+.text-control input { width: 80px; border: 1px solid #3b4143; border-radius: 6px; padding: 6px; color: #f7f8f8; background: #17191a; }
+.zoom-control output { min-width: 32px; }
+.empty-state { max-width: 440px; text-align: center; }.empty-state p { color: #b8c0c3; line-height: 1.5; }.status { min-width: 0; min-height: 42px; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 8px 18px; background: #202526; color: #b8c0c3; font-size: 13px; line-height: 1.35; }.status span:first-child { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }.status .operation-state { flex: 0 1 auto; color: #f7f8f8; font-weight: 700; white-space: nowrap; }.status span:last-child { flex: 0 0 auto; align-self: center; white-space: nowrap; }
+@media (max-width: 850px) { .status { flex-direction: column; gap: 4px; }.status span:last-child { align-self: flex-start; } }
+.history { min-width: 0; margin: 0 14px 14px; padding: 10px 12px; border: 1px solid #3a4244; border-radius: 12px; background: #222829; }.history-heading { display: flex; align-items: center; gap: 12px; color: #f7f8f8; font-size: 13px; margin-bottom: 8px; }.history-heading span { color: #8f9a9e; margin-right: auto; }.history-heading button { min-height: 30px; padding: 0 9px; font-size: 12px; }.history-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }.history-item { flex: 0 0 116px; min-height: 78px; padding: 6px; flex-direction: column; gap: 4px; font-size: 11px; }.history-item img { display: block; width: 100%; height: 52px; border-radius: 5px; object-fit: cover; background: #17191a; }.history-item[aria-current="true"] { border-color: #8ec2ff; box-shadow: inset 0 0 0 1px #8ec2ff; }.history-item span { color: #cbd2d4; }

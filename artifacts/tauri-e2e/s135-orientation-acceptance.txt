@@ -1,0 +1,11 @@
+ShotEye packaged orientation acceptance report
+Generated (UTC): 2026-08-30T13:13:58Z
+App path: /Applications/ShotEye.app
+Scope: exact installed arm64 package; real area selection followed by ShotEye File -> Copy Capture
+Result: PASS
+Output: /Users/colbert1/shoteye/artifacts/tauri-e2e/s135-current-orientation.png
+PNG header: 89504e470d0a1a0a
+Dimensions: 800x700
+Bytes: 26605
+Observation: Finder labels in the representative output are upright; no horizontal or vertical mirror is visible.
+Evidence boundary: one-display physical selection; not a secondary-display or public Developer ID/notarization claim.

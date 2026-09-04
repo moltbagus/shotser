@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T12:42:03Z
+App path: /Applications/ShotEye.app
+Result: PASS
+Detail: Accessible editor controls: 25; application menus: 6; representative toolbar clicks: Rectangle, Select; Capture area cancellation restored the ShotEye editor.

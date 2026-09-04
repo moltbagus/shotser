@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility Capture Area cancellation attempt
+Generated (UTC): 2026-09-02
+Result: BLOCKED
+Detail: The opt-in cancellation harness did not reach a terminal Accessibility result within its observation window. Exact verifier processes were terminated; no ShotEyeSelector process remained and the canonical installed process was relaunched and verified at one instance.
+Scope: No capture success, cancellation, or permission behavior is claimed from this run.

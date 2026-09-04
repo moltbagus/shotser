@@ -1,0 +1,13 @@
+ShotEye installed Save acceptance report
+Generated: 2026-08-30
+App: /Applications/ShotEye.app
+Flow: toolbar Capture area -> physical HID selection -> toolbar Save capture -> Open image smoke
+Result: PASS for capture and Save output; Open image smoke exercised
+PNG: /Users/colbert1/shoteye/artifacts/tauri-e2e/s138-tauri-save-acceptance.png
+Header: 89504e470d0a1a0a
+Dimensions: 1000x800
+Bytes: 66800
+SHA-256: 70a5e124969fd713fbee3a23d3035183343d85a16d6d068d8962f0c4cedb736c
+Signature: codesign --verify --deep --strict /Applications/ShotEye.app passed
+Process: exactly one canonical /Applications/ShotEye.app/Contents/MacOS/shoteye
+Boundary: packaged WebView status text is not exposed to Accessibility; reopen pixel-equivalence is not claimed.

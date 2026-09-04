@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T12:41:48Z
+App path: /Applications/ShotEye.app
+Result: PASS
+Detail: Accessible editor controls: 25; application menus: 6; representative toolbar clicks: Rectangle, Select

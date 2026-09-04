@@ -1,0 +1,12 @@
+ShotEye packaged Finder drag-out acceptance report
+Generated (UTC): 2026-08-30T13:13:58Z
+App path: /Applications/ShotEye.app
+Scope: exact installed arm64 package; existing 800x700 capture dragged from ShotEye into an isolated Finder window
+Result: PASS
+Finder target: /Users/colbert1/shoteye/artifacts/tauri-e2e/s137-finder-drop
+Output: /Users/colbert1/shoteye/artifacts/tauri-e2e/s137-finder-drop/ShotEye Capture.png
+PNG header: 89504e470d0a1a0a
+Dimensions: 800x700
+Bytes: 26765
+SHA-256: b615cf86a4ca6f109ab3db639437934609d0947ed7c62f3bbbf7e9b21142b971
+Evidence boundary: Finder drop passed with a single installed process; the DMG remains local-only and Developer ID/Gatekeeper/notarization are separate release gates.

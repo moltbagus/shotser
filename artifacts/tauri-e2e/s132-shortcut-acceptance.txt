@@ -1,0 +1,11 @@
+ShotEye packaged global-shortcut acceptance report
+App path: /Applications/ShotEye.app
+Initial shortcut: CommandOrControl+Shift+Y (⌘⇧Y)
+Focus boundary: Finder was frontmost before the shortcut event
+Default shortcut result: selector launched, Escape cancelled it, selector exited, and the ShotEye editor restored
+Custom shortcut control: Record capture shortcut was clicked through the packaged nested Accessibility tree
+Custom shortcut: CommandOrControl+Shift+U (⌘⇧U)
+Custom shortcut result: selector launched while Finder was frontmost, Escape cancelled it, and selector exited
+Reset control: Reset capture shortcut to default was clicked through the packaged toolbar
+Reset result: default ⌘⇧Y launched the selector again after reset; Escape cancelled it and selector exited
+Scope: proves packaged default/custom global shortcut routing and reset recovery; does not prove a user-recorded shortcut on a different keyboard layout, shortcut conflict with an unrelated running app, Finder drop, secondary-display, Developer ID, Gatekeeper, or notarization behavior.

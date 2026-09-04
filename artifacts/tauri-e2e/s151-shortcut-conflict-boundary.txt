@@ -1,0 +1,19 @@
+ShotEye shortcut-conflict platform-boundary audit
+Generated (UTC): 2026-09-02T14:01:00Z
+Scope: local source inspection; no macOS settings were changed.
+
+Fixture source:
+  scripts/shortcut_conflict_fixture.swift
+  Registers Command+Alt+F18 with Carbon RegisterEventHotKey.
+
+Product registration source:
+  tauri-app/src-tauri/Cargo.toml -> tauri-plugin-global-shortcut = "2"
+  /Users/colbert1/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.8.0/src/platform_impl/macos/mod.rs
+  GlobalHotKeyManager::register calls Carbon RegisterEventHotKey for ordinary keyboard shortcuts.
+
+Observed fixture result:
+  artifacts/tauri-e2e/shortcut-conflict-fixture.txt
+  Result: BLOCKED because a second process also successfully registered Command+Alt+F18.
+
+Conclusion:
+  Replacing the fixture with Tauri/global-hotkey would use the same Carbon registration boundary and cannot prove exclusive ownership. The product transaction tests prove preservation and rollback for a registration error, but a physical external-conflict claim requires an independently exclusive macOS shortcut owner. This host/API combination does not provide one through Carbon registration alone.

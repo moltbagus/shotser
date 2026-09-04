@@ -1,0 +1,5 @@
+ShotEye isolated shortcut fixture report
+Result: BLOCKED
+Fixture: Command+Alt+F18
+Detail: macOS accepted a second reservation for the same chord; the Carbon fixture is not an exclusive conflict owner. First=RESERVED	shortcut=Command+Alt+F18	pid=79166; Second=RESERVED	shortcut=Command+Alt+F18	pid=79175
+Cleanup: both fixture processes terminated; no exclusive reservation was claimed.

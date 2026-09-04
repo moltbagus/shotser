@@ -1,0 +1,8 @@
+ShotEye packaged runtime contract
+Result: PASS
+Frontend ready: true
+Capture IPC action succeeded: true
+Window restoration succeeded: true
+Preview dimensions: Some((32, 24))
+Backend dimensions: Some((32, 24))
+Capture activity released: true

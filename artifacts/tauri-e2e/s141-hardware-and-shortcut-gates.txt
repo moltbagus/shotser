@@ -1,0 +1,14 @@
+ShotEye remaining acceptance-gates report
+Generated: 2026-08-30
+
+Display inventory:
+- display=1 frame=(0,0,1470,956) pixels=2940x1912
+- No physically attached secondary display is available in this session.
+
+Shortcut conflict:
+- Attempted reversible occupied-chord acceptance through the installed UI.
+- Accessibility automation was not consistently exposed after package verification; the canonical packaged UI smoke preflight passes, but no conflict result is claimed.
+
+Release boundary:
+- Secondary-display evidence requires another physical display.
+- Shortcut conflict evidence requires a stable Accessibility-enabled desktop session.

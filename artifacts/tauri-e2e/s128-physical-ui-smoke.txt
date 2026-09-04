@@ -1,0 +1,5 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-08-30T12:18:35Z
+App path: /Applications/ShotEye.app
+Result: BLOCKED
+Detail: Accessibility automation is unavailable or the desktop is locked: 978:1022: execution error: Missing accessible button: Open image (-2700)

@@ -1,0 +1,10 @@
+ShotEye release verification rejection evidence
+Generated (UTC): 2026-08-30T03:06:45Z
+Command: ./scripts/verify_app.sh --release --launch --report artifacts/tauri-e2e/s79-release-rejection.txt
+Exit: 1
+Observed: Installed app is not signed by a Developer ID Application identity. Local/ad-hoc builds are not release-ready.
+App: /Applications/ShotEye.app
+App signature: adhoc; TeamIdentifier=not set
+Helper: /Applications/ShotEye.app/Contents/Resources/native/ShotEyeSelector
+Helper signature: adhoc; TeamIdentifier=not set
+Interpretation: expected fail-closed result until an Apple Developer ID Application identity and notarization credentials are available.

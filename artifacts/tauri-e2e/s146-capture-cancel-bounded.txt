@@ -1,0 +1,7 @@
+ShotEye packaged Accessibility UI smoke report
+Generated (UTC): 2026-09-02T13:44:55Z
+App path: /Applications/ShotEye.app
+Result: PASS
+Detail: surface=direct-ax; Direct AX attachment: pid=56603; MATCH	role=AXButton	name=Record capture shortcut; MATCH	role=AXButton	name=Rectangle
+PRESSED	name=Rectangle; MATCH	role=AXButton	name=Select
+PRESSED	name=Select; Capture area cancellation restored the ShotEye editor.

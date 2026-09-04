@@ -1,0 +1,14 @@
+ShotEye package verification report
+Generated (UTC): 2026-08-30T00:20:41Z
+App path: /Applications/ShotEye.app
+Bundle: shoteye (com.moltbagus.shoteye.tauri)
+App executable SHA-256: 3906cc698f1fcd4eaa312f4ab73ec82c1eb744155bf189e1cb0040e5a755bee5
+Helper SHA-256: 9e6c4efaa9e102dbdf1b7e366ccdd715090214adbfd629482987012efcd5a3e9
+Helper permission preflight exit: 0
+Helper display-read self-test exit: 0
+DMG path: /Users/colbert1/shoteye/tauri-app/src-tauri/target/aarch64-apple-darwin/release/bundle/dmg/ShotEye_0.1.0_aarch64.dmg
+DMG SHA-256: c1f9ece56b7ce6f7f9650c15b076345c949551b8d48d63eabcc02057c3b4a532
+Artifact path: artifacts/tauri-e2e/s52-shoteye-runtime.png
+Artifact SHA-256: 2e8c5c8b37b1f3e7f26d7bb2c4c63dd95f22f764d11682dfc42244e14150bdbc
+Artifact PNG header: 89504e470d0a1a0a
+Artifact dimensions:   pixelWidth: 2940,  pixelHeight: 1912
